@@ -1,49 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SkillUp - Skill Development</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-    <h2>SkillUp</h2>
+    <div class="navbar">
+        <div class="logo">Skill<span>Up</span></div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Explore Skills</a>
-        <a href="dashboard.html">My Learning</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="login.html">Login</a>
-    </nav>
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Explore Skills</a></li>
+            <li><a href="dashboard.html">My Learning</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+
+        <a href="login.html" class="nav-btn">Login</a>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Learn Skills. Build Your Future.</h1>
+    <div class="hero-content">
+        <p class="tagline">SKILL DEVELOPMENT PLATFORM</p>
+        <h1>Learn Skills. <span>Build Your Future.</span></h1>
+        <p class="hero-text">
+            Improve your knowledge and develop new skills
+            with SkillUp.
+        </p>
+        <a href="skills.html" class="primary-btn">Explore Skills</a>
+        <a href="quiz.html" class="secondary-btn">Take a Quiz</a>
+    </div>
 
-    <p>
-        Improve your knowledge and develop
-        new skills with SkillUp.
-    </p>
-
-    <a href="skills.html" class="btn">
-        Explore Skills
-    </a>
+    <div class="hero-card">
+        <div class="book-icon">📚</div>
+        <h2>Start Learning</h2>
+        <p>Pick a skill and grow every day.</p>
+        <div class="mini-stats">
+            <div><h3>5+</h3><p>Skills</p></div>
+            <div><h3>100+</h3><p>Lessons</p></div>
+        </div>
+    </div>
 </section>
 
-<section class="about">
-    <h2>Why Choose SkillUp?</h2>
+<section class="skills-section">
+    <div class="section-heading">
+        <h2>Popular Skills</h2>
+        <p>Choose a skill and start learning.</p>
+    </div>
 
-    <p>
-        SkillUp helps students learn programming,
-        communication, creativity and career skills.
-    </p>
+    <div class="skills-container">
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript to build websites.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">☕</div>
+            <h3>Java Programming</h3>
+            <p>Understand Java basics and object-oriented concepts.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3>Python Programming</h3>
+            <p>Start coding with simple and powerful Python.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🗣️</div>
+            <h3>Communication Skills</h3>
+            <p>Improve speaking, writing and confidence.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>Create attractive designs and visuals.</p>
+        </div>
+    </div>
+</section>
+
+<section class="why-section">
+    <div class="section-heading">
+        <h2>Why Choose SkillUp?</h2>
+        <p>SkillUp helps students learn programming, communication, creativity and career skills.</p>
+    </div>
+
+    <div class="why-container">
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Easy to Learn</h3>
+            <p>Simple lessons for beginners.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">📈</div>
+            <h3>Track Progress</h3>
+            <p>See how much you have learned.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🏆</div>
+            <h3>Test Yourself</h3>
+            <p>Take quizzes to check your knowledge.</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 SkillUp | Skill Development Platform</p>
+    <h2>Skill<span>Up</span></h2>
+    <p>Skill Development Platform</p>
+    <p class="copyright">© 2026 SkillUp. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById("menuBtn").addEventListener("click", function () {
+        document.getElementById("navLinks").classList.toggle("show");
+    });
+</script>
 
 </body>
 </html>
