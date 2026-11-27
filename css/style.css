@@ -1,434 +1,112 @@
-/* BASIC SETTINGS */
+/* ---------- EXTRA STYLES FOR NEW FEATURES ---------- */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+.page { display: none; }
+.page.active { display: block; }
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f8f9ff;
-    color: #252447;
-}
-
-
-/* NAVIGATION BAR */
-
-header {
-    background: white;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #5146c7;
-}
-
-.logo span,
-footer span {
-    color: #ff8b65;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #6254d8;
-}
-
-.nav-btn {
-    background: #5146c7;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.menu-btn {
-    display: none;
+.btn-plain {
     border: none;
-    background: none;
-    font-size: 25px;
     cursor: pointer;
+    font-size: 15px;
 }
 
-
-/* HERO SECTION */
-
-.hero {
-    min-height: 570px;
-    padding: 90px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    background: linear-gradient(120deg, #eeedff, #fceefa);
+.btn-small {
+    margin-top: 15px;
+    padding: 10px 18px;
 }
 
-.hero-content {
-    max-width: 600px;
-}
+.full { width: 100%; }
 
-.tagline {
-    color: #6254d8;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 13px;
-    margin-bottom: 18px;
-}
+.form-card { margin: auto; }
 
-.hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #6254d8;
-}
-
-.hero-text {
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    max-width: 520px;
-}
-
-.primary-btn,
-.secondary-btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 14px 22px;
-    border-radius: 8px;
-    margin: 5px 8px 5px 0;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.primary-btn {
-    background: #5146c7;
-    color: white;
-}
-
-.primary-btn:hover {
-    background: #352c9a;
-    transform: translateY(-3px);
-}
-
-.secondary-btn {
-    border: 2px solid #5146c7;
-    color: #5146c7;
-}
-
-
-/* HERO CARD */
-
-.hero-card {
-    background: white;
-    padding: 40px;
-    width: 320px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 35px rgba(60,50,130,0.12);
-}
-
-.book-icon {
-    font-size: 65px;
+.form-input {
+    width: 100%;
+    padding: 12px;
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
-.hero-card h2 {
-    margin-bottom: 10px;
-}
+.quiz-q { margin-top: 20px; }
+.quiz-q:first-child { margin-top: 0; }
 
-.hero-card p {
-    color: #777;
-}
-
-.mini-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.mini-stats h3 {
-    color: #6254d8;
-    font-size: 23px;
-}
-
-
-/* SECTION HEADING */
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-heading h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.section-heading > p:last-child {
-    color: #777;
-    line-height: 1.6;
-}
-
-
-/* SKILLS SECTION */
-
-.skills-section {
-    padding: 85px 8%;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.skill-card {
-    background: white;
-    padding: 30px 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(81,70,199,0.13);
-}
-
-.skill-icon {
-    font-size: 38px;
-    margin-bottom: 18px;
-}
-
-.skill-card h3 {
-    margin-bottom: 12px;
+.quiz-result {
+    margin-top: 20px;
     color: #5146c7;
 }
 
-.skill-card p {
+.login-msg {
+    margin-top: 15px;
+    color: #5146c7;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background: #eeedff;
+    border-radius: 10px;
+    height: 10px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #5146c7;
+    height: 100%;
+    transition: width 0.4s;
+}
+
+.empty-box {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    text-align: center;
     color: #777;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(37, 36, 71, 0.6);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.open { display: flex; }
+
+.modal-box {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px 30px;
+    border-radius: 18px;
+    position: relative;
     line-height: 1.7;
 }
 
+.modal-box h2 { color: #5146c7; margin-bottom: 8px; }
 
-/* WHY CHOOSE US */
+.modal-desc { color: #777; margin-bottom: 15px; }
 
-.why-section {
-    background: #eeedff;
-    padding: 80px 8%;
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
 }
 
-.why-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.why-card {
-    background: white;
-    padding: 35px 25px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-.why-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.why-card h3 {
-    margin-bottom: 12px;
-}
-
-.why-card p {
-    color: #777;
-    line-height: 1.6;
-}
-
-
-/* ABOUT SECTION */
-
-.about-section {
-    padding: 90px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.about-content {
-    max-width: 600px;
-}
-
-.about-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-content p {
-    color: #777;
-    line-height: 1.8;
-    margin-bottom: 18px;
-}
-
-.about-icon {
-    background: #eeedff;
-    width: 270px;
-    height: 230px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    font-size: 65px;
-}
-
-.about-icon h3 {
-    font-size: 19px;
-    color: #5146c7;
-}
-
-
-/* CONTACT SECTION */
-
-.contact-section {
-    background: linear-gradient(120deg, #5146c7, #8879eb);
-    text-align: center;
-    color: white;
-    padding: 75px 20px;
-}
-
-.contact-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.contact-section p {
-    margin-bottom: 25px;
-}
-
-.contact-section .primary-btn {
-    background: white;
-    color: #5146c7;
-}
-
-
-/* FOOTER */
-
-footer {
-    background: #252447;
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
-}
-
-footer h2 {
-    margin-bottom: 12px;
-}
-
-footer p {
-    color: #ccc;
-    margin-bottom: 12px;
-}
-
-.copyright {
-    font-size: 13px;
-    margin-top: 20px;
-}
-
-
-/* MOBILE RESPONSIVE DESIGN */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-wrap: wrap;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 20px 0;
-        gap: 20px;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-btn {
-        display: none;
-    }
-
-    .hero {
-        padding: 65px 7%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .skills-container,
-    .why-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-section {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .about-icon {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .contact-section h2 {
-        font-size: 26px;
-    }
+.topic-list {
+    margin: 8px 0 22px 22px;
+    color: #555;
 }

@@ -8,117 +8,146 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="navbar">
         <div class="logo">Skill<span>Up</span></div>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Explore Skills</a></li>
-            <li><a href="dashboard.html">My Learning</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Explore Skills</a></li>
+            <li><a href="#learning">My Learning</a></li>
+            <li><a href="#quiz">Quiz</a></li>
         </ul>
 
-        <a href="login.html" class="nav-btn">Login</a>
+        <a href="#login" class="nav-btn" id="loginBtn">Login</a>
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <p class="tagline">SKILL DEVELOPMENT PLATFORM</p>
-        <h1>Learn Skills. <span>Build Your Future.</span></h1>
-        <p class="hero-text">
-            Improve your knowledge and develop new skills
-            with SkillUp.
-        </p>
-        <a href="skills.html" class="primary-btn">Explore Skills</a>
-        <a href="quiz.html" class="secondary-btn">Take a Quiz</a>
-    </div>
+<!-- HOME -->
+<div class="page active" id="home">
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">SKILL DEVELOPMENT PLATFORM</p>
+            <h1>Learn Skills. <span>Build Your Future.</span></h1>
+            <p class="hero-text">Improve your knowledge and develop new skills with SkillUp.</p>
+            <a href="#skills" class="primary-btn">Explore Skills</a>
+            <a href="#quiz" class="secondary-btn">Take a Quiz</a>
+        </div>
 
-    <div class="hero-card">
-        <div class="book-icon">📚</div>
-        <h2>Start Learning</h2>
-        <p>Pick a skill and grow every day.</p>
-        <div class="mini-stats">
-            <div><h3>5+</h3><p>Skills</p></div>
-            <div><h3>100+</h3><p>Lessons</p></div>
+        <div class="hero-card">
+            <div class="book-icon">📚</div>
+            <h2>Start Learning</h2>
+            <p>Pick a skill and grow every day.</p>
+            <div class="mini-stats">
+                <div><h3>5+</h3><p>Skills</p></div>
+                <div><h3>100+</h3><p>Lessons</p></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="skills-section">
-    <div class="section-heading">
-        <h2>Popular Skills</h2>
-        <p>Choose a skill and start learning.</p>
-    </div>
+    <section class="why-section">
+        <div class="section-heading">
+            <h2>Why Choose SkillUp?</h2>
+            <p>SkillUp helps students learn programming, communication, creativity and career skills.</p>
+        </div>
+        <div class="why-container">
+            <div class="why-card">
+                <div class="why-icon">🎯</div>
+                <h3>Easy to Learn</h3>
+                <p>Simple lessons for beginners.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📈</div>
+                <h3>Track Progress</h3>
+                <p>See how much you have learned.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🏆</div>
+                <h3>Test Yourself</h3>
+                <p>Take quizzes to check your knowledge.</p>
+            </div>
+        </div>
+    </section>
+</div>
 
-    <div class="skills-container">
-        <div class="skill-card">
-            <div class="skill-icon">💻</div>
-            <h3>Web Development</h3>
-            <p>Learn HTML, CSS and JavaScript to build websites.</p>
+<!-- EXPLORE SKILLS -->
+<div class="page" id="skills">
+    <section class="skills-section">
+        <div class="section-heading">
+            <h2>Explore Skills</h2>
+            <p>Click Learn More to see details about each skill.</p>
         </div>
-        <div class="skill-card">
-            <div class="skill-icon">☕</div>
-            <h3>Java Programming</h3>
-            <p>Understand Java basics and object-oriented concepts.</p>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon">🐍</div>
-            <h3>Python Programming</h3>
-            <p>Start coding with simple and powerful Python.</p>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon">🗣️</div>
-            <h3>Communication Skills</h3>
-            <p>Improve speaking, writing and confidence.</p>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon">🎨</div>
-            <h3>Graphic Design</h3>
-            <p>Create attractive designs and visuals.</p>
-        </div>
-    </div>
-</section>
+        <div class="skills-container" id="skillsList"></div>
+    </section>
+</div>
 
-<section class="why-section">
-    <div class="section-heading">
-        <h2>Why Choose SkillUp?</h2>
-        <p>SkillUp helps students learn programming, communication, creativity and career skills.</p>
-    </div>
+<!-- MY LEARNING -->
+<div class="page" id="learning">
+    <section class="skills-section">
+        <div class="section-heading">
+            <h2>My Learning</h2>
+            <p>Skills you started will appear here.</p>
+        </div>
+        <div class="skills-container" id="learningList"></div>
+    </section>
+</div>
 
-    <div class="why-container">
-        <div class="why-card">
-            <div class="why-icon">🎯</div>
-            <h3>Easy to Learn</h3>
-            <p>Simple lessons for beginners.</p>
+<!-- QUIZ -->
+<div class="page" id="quiz">
+    <section class="skills-section">
+        <div class="section-heading">
+            <h2>Skill Quiz</h2>
+            <p>Answer all questions and check your score.</p>
         </div>
-        <div class="why-card">
-            <div class="why-icon">📈</div>
-            <h3>Track Progress</h3>
-            <p>See how much you have learned.</p>
+        <div class="skill-card form-card" style="max-width:700px;">
+            <div id="quizBox"></div>
+            <button class="primary-btn btn-plain" onclick="checkQuiz()">Submit Quiz</button>
+            <h3 id="quizResult" class="quiz-result"></h3>
         </div>
-        <div class="why-card">
-            <div class="why-icon">🏆</div>
-            <h3>Test Yourself</h3>
-            <p>Take quizzes to check your knowledge.</p>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 
+<!-- LOGIN -->
+<div class="page" id="login">
+    <section class="skills-section">
+        <div class="section-heading">
+            <h2>Login</h2>
+            <p>Welcome to SkillUp.</p>
+        </div>
+        <div class="skill-card form-card" style="max-width:400px;">
+            <input type="text" id="userName" class="form-input" placeholder="Your name">
+            <input type="password" id="userPass" class="form-input" placeholder="Password">
+            <button class="primary-btn btn-plain full" onclick="loginUser()">Login</button>
+            <p id="loginMsg" class="login-msg"></p>
+        </div>
+    </section>
+</div>
+
+<!-- SKILL POPUP -->
+<div class="modal" id="skillModal">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="skill-icon" id="mIcon"></div>
+        <h2 id="mTitle"></h2>
+        <p id="mDesc" class="modal-desc"></p>
+        <p><strong>Level:</strong> <span id="mLevel"></span></p>
+        <p><strong>Duration:</strong> <span id="mDuration"></span></p>
+        <p><strong>Topics:</strong></p>
+        <ul id="mTopics" class="topic-list"></ul>
+        <button class="primary-btn btn-plain" id="mStartBtn">Start Learning</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
     <h2>Skill<span>Up</span></h2>
     <p>Skill Development Platform</p>
     <p class="copyright">© 2026 SkillUp. All rights reserved.</p>
 </footer>
 
-<script>
-    document.getElementById("menuBtn").addEventListener("click", function () {
-        document.getElementById("navLinks").classList.toggle("show");
-    });
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
